@@ -110,7 +110,14 @@ public class CustomerRestController {
 		List<CustomerES> finalData = data.stream().map(i -> {
 			CustomerES es = new CustomerES();
             try {
-                BeanUtils.copyProperties(i, es);
+            	es.setCountry(i.country);
+            	es.setFirstName(i.firstName);
+            	es.setLastName(i.lastName);
+            	es.setLocation(i.location);
+            	es.setMiddleName(i.middleName);
+            	es.setPhonenumber(i.phonenumber);
+            	es.setTitle(i.title);
+
             } catch (Exception ex) {
                 ex.printStackTrace();
             }

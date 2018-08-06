@@ -57,6 +57,7 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 ENV MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
 ENTRYPOINT ["/usr/bin/mvn"]
 VOLUME /root/.m2
+VOLUME /log
 # ----
 # Install GIT
 RUN apk update && apk upgrade && \

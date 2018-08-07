@@ -8,7 +8,8 @@ import lombok.Data;
 @Data
 public class Customer {
 
-    @Id
+   
+	@Id
     public String id;
 
     public String firstName;
@@ -19,4 +20,10 @@ public class Customer {
     public String phonenumber;
     public String middleName;
 
+    @Override
+   	public String toString() {
+   		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", title=" + title
+   				+ ", location=" + location + ", country=" + country + ", phonenumber=" + phonenumber + ", middleName="
+   				+ middleName + "]";
+   	}
 }

@@ -74,7 +74,7 @@ COPY src /usr/src/app/src
 # package the contents
 COPY Dockerfile /usr/src/app
 #RUN git clone https://github.com/aritnag/spring-boot-mongo-kubernetes-docker.git
-RUN rm -rf target && mvn -T 1C package
+RUN rm -rf target && mvn  package -DskipTests
 
 
 WORKDIR /usr/src/app/target/
@@ -88,6 +88,6 @@ RUN ls
 RUN cp Spring-boot-mongo-ES-*.jar  app.jar
 #ENV JAVA_OPTS=""
 ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar app.jar
-EXPOSE 8000
+EXPOSE 25826
 #ENTRYPOINT ["sh", "-c"]
 CMD ["java -jar app.jar"] 

@@ -1,0 +1,523 @@
+2018-08-06 17:23:36.381  INFO 32603 --- [main] .e.a.S.SpringBootMongoEsApplicationTests : Starting SpringBootMongoEsApplicationTests on ip-172-31-85-42 with PID 32603 (started by root in /home/ubuntu/spring-boot-mongo-ES)
+2018-08-06 17:23:36.384  INFO 32603 --- [main] .e.a.S.SpringBootMongoEsApplicationTests : No active profile set, falling back to default profiles: default
+2018-08-06 17:23:36.456  INFO 32603 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@27912e3: startup date [Mon Aug 06 17:23:36 UTC 2018]; root of context hierarchy
+2018-08-06 17:23:37.365  INFO 32603 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-08-06 17:23:37.426  INFO 32603 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.example.elasticsearch.aws.SpringbootmongoES.repository.CustomerESRepository.
+2018-08-06 17:23:37.795  INFO 32603 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-08-06 17:23:37.800  INFO 32603 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.example.elasticsearch.aws.SpringbootmongoES.repository.CustomerRepository.
+2018-08-06 17:23:38.315  INFO 32603 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#35fb22a9' of type [com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:23:38.323  INFO 32603 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#289778cd' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:23:38.333  INFO 32603 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:23:38.333  INFO 32603 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:23:38.347  WARN 32603 --- [main] com.amazonaws.util.EC2MetadataUtils      : Unable to retrieve the requested metadata.
+2018-08-06 17:23:38.813  INFO 32603 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[18.212.164.201:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-08-06 17:23:38.919  INFO 32603 --- [cluster-ClusterId{value='5b68841ae4cd477f5b573f13', description='null'}-18.212.164.201:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:8}] to 18.212.164.201:27017
+2018-08-06 17:23:38.923  INFO 32603 --- [cluster-ClusterId{value='5b68841ae4cd477f5b573f13', description='null'}-18.212.164.201:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=18.212.164.201:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 4]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1421680}
+2018-08-06 17:23:39.400  INFO 32603 --- [main] io.searchbox.client.AbstractJestClient   : Setting server pool to a list of 1 servers: [https://search-microservice-cluster-zzfctkiahe5vfwhcv2sopp4dau.us-east-1.es.amazonaws.com/]
+2018-08-06 17:23:39.403  INFO 32603 --- [main] io.searchbox.client.JestClientFactory    : Using multi thread/connection supporting pooling connection manager
+2018-08-06 17:23:39.502  INFO 32603 --- [main] io.searchbox.client.JestClientFactory    : Using default GSON instance
+2018-08-06 17:23:39.502  INFO 32603 --- [main] io.searchbox.client.JestClientFactory    : Node Discovery disabled...
+2018-08-06 17:23:39.502  INFO 32603 --- [main] io.searchbox.client.JestClientFactory    : Idle connection reaping disabled...
+2018-08-06 17:23:40.267  INFO 32603 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-06 17:23:40.558  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@27912e3: startup date [Mon Aug 06 17:23:36 UTC 2018]; root of context hierarchy
+2018-08-06 17:23:40.633  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.Customer> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findAll()
+2018-08-06 17:23:40.634  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findESAll()
+2018-08-06 17:23:40.634  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/first/{firstName}]}" onto public com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByFirstNameES(java.lang.String)
+2018-08-06 17:23:40.634  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/first/{firstName}]}" onto public com.example.elasticsearch.aws.SpringbootmongoES.model.Customer com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByFirstName(java.lang.String)
+2018-08-06 17:23:40.635  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/last/{lastName}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.Customer> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByLastName(java.lang.String)
+2018-08-06 17:23:40.635  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/last/{lastName}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByLastNameES(java.lang.String)
+2018-08-06 17:23:40.635  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/cn/{country}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.Customer> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByCountry(java.lang.String)
+2018-08-06 17:23:40.635  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/cn/{country}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByCountryES(java.lang.String)
+2018-08-06 17:23:40.636  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/sync/],methods=[GET]}" onto public void com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.syncMongoAndES()
+2018-08-06 17:23:40.636  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/],methods=[POST]}" onto public void com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.save(com.example.elasticsearch.aws.SpringbootmongoES.model.Customer)
+2018-08-06 17:23:40.636  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/],methods=[POST]}" onto public void com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.save(com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES)
+2018-08-06 17:23:40.639  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-06 17:23:40.640  INFO 32603 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-06 17:23:40.669  INFO 32603 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-06 17:23:40.669  INFO 32603 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-06 17:23:41.949  WARN 32603 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.aws.core.env.ResourceIdResolver.BEAN_NAME': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stackResourceRegistryFactoryBean' defined in class path resource [org/springframework/cloud/aws/autoconfigure/context/ContextStackAutoConfiguration$StackAutoDetectConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: 76d7cf7c-999d-11e8-aa1c-137008bee5dc)
+2018-08-06 17:23:41.975  INFO 32603 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-06 17:23:41.983 ERROR 32603 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.aws.core.env.ResourceIdResolver.BEAN_NAME': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stackResourceRegistryFactoryBean' defined in class path resource [org/springframework/cloud/aws/autoconfigure/context/ContextStackAutoConfiguration$StackAutoDetectConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: 76d7cf7c-999d-11e8-aa1c-137008bee5dc)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) [spring-boot-test-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stackResourceRegistryFactoryBean' defined in class path resource [org/springframework/cloud/aws/autoconfigure/context/ContextStackAutoConfiguration$StackAutoDetectConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: 76d7cf7c-999d-11e8-aa1c-137008bee5dc)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:514) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:502) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.cloud.aws.core.env.StackResourceRegistryDetectingResourceIdResolver.findSingleOptionalStackResourceRegistry(StackResourceRegistryDetectingResourceIdResolver.java:81) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.StackResourceRegistryDetectingResourceIdResolver.afterPropertiesSet(StackResourceRegistryDetectingResourceIdResolver.java:77) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 42 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: 76d7cf7c-999d-11e8-aa1c-137008bee5dc)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 56 common frames omitted
+Caused by: com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: 76d7cf7c-999d-11e8-aa1c-137008bee5dc)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1632) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1304) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1058) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:743) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:717) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:699) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:667) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:649) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:513) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.doInvoke(AmazonCloudFormationClient.java:2733) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.invoke(AmazonCloudFormationClient.java:2709) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.executeDescribeStackResources(AmazonCloudFormationClient.java:1247) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.describeStackResources(AmazonCloudFormationClient.java:1222) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.autoDetectStackName(AutoDetectingStackNameProvider.java:76) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.afterPropertiesSet(AutoDetectingStackNameProvider.java:62) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.<init>(AutoDetectingStackNameProvider.java:52) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.<init>(AutoDetectingStackNameProvider.java:56) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration.stackResourceRegistryFactoryBean(ContextStackAutoConfiguration.java:71) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$51fa2966.CGLIB$stackResourceRegistryFactoryBean$0(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$51fa2966$$FastClassBySpringCGLIB$$9e7934fe.invoke(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$51fa2966.stackResourceRegistryFactoryBean(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 57 common frames omitted
+
+2018-08-06 17:23:41.988 ERROR 32603 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@55f616cf] to prepare test instance [com.example.elasticsearch.aws.SpringbootmongoES.SpringBootMongoEsApplicationTests@76828577]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.aws.core.env.ResourceIdResolver.BEAN_NAME': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stackResourceRegistryFactoryBean' defined in class path resource [org/springframework/cloud/aws/autoconfigure/context/ContextStackAutoConfiguration$StackAutoDetectConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: 76d7cf7c-999d-11e8-aa1c-137008bee5dc)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) ~[spring-boot-test-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stackResourceRegistryFactoryBean' defined in class path resource [org/springframework/cloud/aws/autoconfigure/context/ContextStackAutoConfiguration$StackAutoDetectConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: 76d7cf7c-999d-11e8-aa1c-137008bee5dc)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:514) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:502) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.cloud.aws.core.env.StackResourceRegistryDetectingResourceIdResolver.findSingleOptionalStackResourceRegistry(StackResourceRegistryDetectingResourceIdResolver.java:81) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.StackResourceRegistryDetectingResourceIdResolver.afterPropertiesSet(StackResourceRegistryDetectingResourceIdResolver.java:77) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 42 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: 76d7cf7c-999d-11e8-aa1c-137008bee5dc)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 56 common frames omitted
+Caused by: com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: 76d7cf7c-999d-11e8-aa1c-137008bee5dc)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1632) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1304) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1058) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:743) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:717) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:699) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:667) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:649) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:513) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.doInvoke(AmazonCloudFormationClient.java:2733) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.invoke(AmazonCloudFormationClient.java:2709) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.executeDescribeStackResources(AmazonCloudFormationClient.java:1247) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.describeStackResources(AmazonCloudFormationClient.java:1222) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.autoDetectStackName(AutoDetectingStackNameProvider.java:76) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.afterPropertiesSet(AutoDetectingStackNameProvider.java:62) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.<init>(AutoDetectingStackNameProvider.java:52) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.<init>(AutoDetectingStackNameProvider.java:56) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration.stackResourceRegistryFactoryBean(ContextStackAutoConfiguration.java:71) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$51fa2966.CGLIB$stackResourceRegistryFactoryBean$0(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$51fa2966$$FastClassBySpringCGLIB$$9e7934fe.invoke(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$51fa2966.stackResourceRegistryFactoryBean(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 57 common frames omitted
+
+2018-08-06 17:25:16.288  INFO 1162 --- [main] .e.a.S.SpringBootMongoEsApplicationTests : Starting SpringBootMongoEsApplicationTests on ip-172-31-85-42 with PID 1162 (started by root in /home/ubuntu/spring-boot-mongo-ES)
+2018-08-06 17:25:16.292  INFO 1162 --- [main] .e.a.S.SpringBootMongoEsApplicationTests : No active profile set, falling back to default profiles: default
+2018-08-06 17:25:16.353  INFO 1162 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@43015c69: startup date [Mon Aug 06 17:25:16 UTC 2018]; root of context hierarchy
+2018-08-06 17:25:17.277  INFO 1162 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-08-06 17:25:17.318  INFO 1162 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.example.elasticsearch.aws.SpringbootmongoES.repository.CustomerESRepository.
+2018-08-06 17:25:17.615  INFO 1162 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-08-06 17:25:17.619  INFO 1162 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.example.elasticsearch.aws.SpringbootmongoES.repository.CustomerRepository.
+2018-08-06 17:25:18.034  INFO 1162 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#5fc930f0' of type [com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:25:18.042  INFO 1162 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#af9a89f' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:25:18.048  INFO 1162 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:25:18.049  INFO 1162 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:25:18.064  WARN 1162 --- [main] com.amazonaws.util.EC2MetadataUtils      : Unable to retrieve the requested metadata.
+2018-08-06 17:25:18.541  INFO 1162 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[18.212.164.201:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-08-06 17:25:18.619  INFO 1162 --- [cluster-ClusterId{value='5b68847ee4cd47048a385877', description='null'}-18.212.164.201:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:9}] to 18.212.164.201:27017
+2018-08-06 17:25:18.622  INFO 1162 --- [cluster-ClusterId{value='5b68847ee4cd47048a385877', description='null'}-18.212.164.201:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=18.212.164.201:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 4]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1184888}
+2018-08-06 17:25:19.045  INFO 1162 --- [main] io.searchbox.client.AbstractJestClient   : Setting server pool to a list of 1 servers: [https://search-microservice-cluster-zzfctkiahe5vfwhcv2sopp4dau.us-east-1.es.amazonaws.com/]
+2018-08-06 17:25:19.054  INFO 1162 --- [main] io.searchbox.client.JestClientFactory    : Using multi thread/connection supporting pooling connection manager
+2018-08-06 17:25:19.141  INFO 1162 --- [main] io.searchbox.client.JestClientFactory    : Using default GSON instance
+2018-08-06 17:25:19.142  INFO 1162 --- [main] io.searchbox.client.JestClientFactory    : Node Discovery disabled...
+2018-08-06 17:25:19.142  INFO 1162 --- [main] io.searchbox.client.JestClientFactory    : Idle connection reaping disabled...
+2018-08-06 17:25:19.885  INFO 1162 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-06 17:25:20.202  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@43015c69: startup date [Mon Aug 06 17:25:16 UTC 2018]; root of context hierarchy
+2018-08-06 17:25:20.301  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.Customer> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findAll()
+2018-08-06 17:25:20.304  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findESAll()
+2018-08-06 17:25:20.305  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/first/{firstName}]}" onto public com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByFirstNameES(java.lang.String)
+2018-08-06 17:25:20.306  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/first/{firstName}]}" onto public com.example.elasticsearch.aws.SpringbootmongoES.model.Customer com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByFirstName(java.lang.String)
+2018-08-06 17:25:20.310  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/last/{lastName}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.Customer> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByLastName(java.lang.String)
+2018-08-06 17:25:20.311  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/last/{lastName}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByLastNameES(java.lang.String)
+2018-08-06 17:25:20.311  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/cn/{country}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.Customer> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByCountry(java.lang.String)
+2018-08-06 17:25:20.312  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/cn/{country}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByCountryES(java.lang.String)
+2018-08-06 17:25:20.312  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/sync/],methods=[GET]}" onto public void com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.syncMongoAndES()
+2018-08-06 17:25:20.313  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/],methods=[POST]}" onto public void com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.save(com.example.elasticsearch.aws.SpringbootmongoES.model.Customer)
+2018-08-06 17:25:20.313  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/],methods=[POST]}" onto public void com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.save(com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES)
+2018-08-06 17:25:20.319  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-06 17:25:20.319  INFO 1162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-06 17:25:20.359  INFO 1162 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-06 17:25:20.360  INFO 1162 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-06 17:25:21.736  WARN 1162 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.aws.core.env.ResourceIdResolver.BEAN_NAME': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stackResourceRegistryFactoryBean' defined in class path resource [org/springframework/cloud/aws/autoconfigure/context/ContextStackAutoConfiguration$StackAutoDetectConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: b251cae1-999d-11e8-aacc-8fa2f7ef3692)
+2018-08-06 17:25:21.758  INFO 1162 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-06 17:25:21.764 ERROR 1162 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.aws.core.env.ResourceIdResolver.BEAN_NAME': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stackResourceRegistryFactoryBean' defined in class path resource [org/springframework/cloud/aws/autoconfigure/context/ContextStackAutoConfiguration$StackAutoDetectConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: b251cae1-999d-11e8-aacc-8fa2f7ef3692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) [spring-boot-test-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stackResourceRegistryFactoryBean' defined in class path resource [org/springframework/cloud/aws/autoconfigure/context/ContextStackAutoConfiguration$StackAutoDetectConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: b251cae1-999d-11e8-aacc-8fa2f7ef3692)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:514) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:502) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.cloud.aws.core.env.StackResourceRegistryDetectingResourceIdResolver.findSingleOptionalStackResourceRegistry(StackResourceRegistryDetectingResourceIdResolver.java:81) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.StackResourceRegistryDetectingResourceIdResolver.afterPropertiesSet(StackResourceRegistryDetectingResourceIdResolver.java:77) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 42 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: b251cae1-999d-11e8-aacc-8fa2f7ef3692)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 56 common frames omitted
+Caused by: com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: b251cae1-999d-11e8-aacc-8fa2f7ef3692)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1632) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1304) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1058) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:743) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:717) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:699) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:667) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:649) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:513) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.doInvoke(AmazonCloudFormationClient.java:2733) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.invoke(AmazonCloudFormationClient.java:2709) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.executeDescribeStackResources(AmazonCloudFormationClient.java:1247) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.describeStackResources(AmazonCloudFormationClient.java:1222) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.autoDetectStackName(AutoDetectingStackNameProvider.java:76) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.afterPropertiesSet(AutoDetectingStackNameProvider.java:62) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.<init>(AutoDetectingStackNameProvider.java:52) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.<init>(AutoDetectingStackNameProvider.java:56) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration.stackResourceRegistryFactoryBean(ContextStackAutoConfiguration.java:71) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$444a7b71.CGLIB$stackResourceRegistryFactoryBean$0(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$444a7b71$$FastClassBySpringCGLIB$$7ffb4ab2.invoke(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$444a7b71.stackResourceRegistryFactoryBean(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 57 common frames omitted
+
+2018-08-06 17:25:21.779 ERROR 1162 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@55f616cf] to prepare test instance [com.example.elasticsearch.aws.SpringbootmongoES.SpringBootMongoEsApplicationTests@3b770d07]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cloud.aws.core.env.ResourceIdResolver.BEAN_NAME': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stackResourceRegistryFactoryBean' defined in class path resource [org/springframework/cloud/aws/autoconfigure/context/ContextStackAutoConfiguration$StackAutoDetectConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: b251cae1-999d-11e8-aacc-8fa2f7ef3692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) ~[spring-boot-test-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stackResourceRegistryFactoryBean' defined in class path resource [org/springframework/cloud/aws/autoconfigure/context/ContextStackAutoConfiguration$StackAutoDetectConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: b251cae1-999d-11e8-aacc-8fa2f7ef3692)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:514) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:502) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.cloud.aws.core.env.StackResourceRegistryDetectingResourceIdResolver.findSingleOptionalStackResourceRegistry(StackResourceRegistryDetectingResourceIdResolver.java:81) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.StackResourceRegistryDetectingResourceIdResolver.afterPropertiesSet(StackResourceRegistryDetectingResourceIdResolver.java:77) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 42 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.aws.core.env.stack.config.StackResourceRegistryFactoryBean]: Factory method 'stackResourceRegistryFactoryBean' threw exception; nested exception is com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: b251cae1-999d-11e8-aacc-8fa2f7ef3692)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 56 common frames omitted
+Caused by: com.amazonaws.services.cloudformation.model.AmazonCloudFormationException: Stack for i-0336ffdc94da32adc does not exist (Service: AmazonCloudFormation; Status Code: 400; Error Code: ValidationError; Request ID: b251cae1-999d-11e8-aacc-8fa2f7ef3692)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1632) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1304) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1058) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:743) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:717) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:699) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:667) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:649) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:513) ~[aws-java-sdk-core-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.doInvoke(AmazonCloudFormationClient.java:2733) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.invoke(AmazonCloudFormationClient.java:2709) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.executeDescribeStackResources(AmazonCloudFormationClient.java:1247) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at com.amazonaws.services.cloudformation.AmazonCloudFormationClient.describeStackResources(AmazonCloudFormationClient.java:1222) ~[aws-java-sdk-cloudformation-1.11.336.jar:na]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.autoDetectStackName(AutoDetectingStackNameProvider.java:76) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.afterPropertiesSet(AutoDetectingStackNameProvider.java:62) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.<init>(AutoDetectingStackNameProvider.java:52) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.core.env.stack.config.AutoDetectingStackNameProvider.<init>(AutoDetectingStackNameProvider.java:56) ~[spring-cloud-aws-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration.stackResourceRegistryFactoryBean(ContextStackAutoConfiguration.java:71) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$444a7b71.CGLIB$stackResourceRegistryFactoryBean$0(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$444a7b71$$FastClassBySpringCGLIB$$7ffb4ab2.invoke(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration$StackAutoDetectConfiguration$$EnhancerBySpringCGLIB$$444a7b71.stackResourceRegistryFactoryBean(<generated>) ~[spring-cloud-aws-autoconfigure-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 57 common frames omitted
+
+2018-08-06 17:26:58.414  INFO 1253 --- [main] .e.a.S.SpringBootMongoEsApplicationTests : Starting SpringBootMongoEsApplicationTests on ip-172-31-85-42 with PID 1253 (started by root in /home/ubuntu/spring-boot-mongo-ES)
+2018-08-06 17:26:58.417  INFO 1253 --- [main] .e.a.S.SpringBootMongoEsApplicationTests : No active profile set, falling back to default profiles: default
+2018-08-06 17:26:58.508  INFO 1253 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@43015c69: startup date [Mon Aug 06 17:26:58 UTC 2018]; root of context hierarchy
+2018-08-06 17:26:59.352  INFO 1253 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-08-06 17:26:59.411  INFO 1253 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.example.elasticsearch.aws.SpringbootmongoES.repository.CustomerESRepository.
+2018-08-06 17:26:59.795  INFO 1253 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-08-06 17:26:59.800  INFO 1253 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.example.elasticsearch.aws.SpringbootmongoES.repository.CustomerRepository.
+2018-08-06 17:27:00.322  INFO 1253 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#72e789cb' of type [com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:27:00.335  INFO 1253 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#8ff5094' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:27:00.343  INFO 1253 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:27:00.344  INFO 1253 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-06 17:27:00.357  WARN 1253 --- [main] com.amazonaws.util.EC2MetadataUtils      : Unable to retrieve the requested metadata.
+2018-08-06 17:27:00.941  INFO 1253 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[18.212.164.201:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-08-06 17:27:01.024  INFO 1253 --- [cluster-ClusterId{value='5b6884e4e4cd4704e56022ad', description='null'}-18.212.164.201:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:10}] to 18.212.164.201:27017
+2018-08-06 17:27:01.035  INFO 1253 --- [cluster-ClusterId{value='5b6884e4e4cd4704e56022ad', description='null'}-18.212.164.201:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=18.212.164.201:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 4]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1869312}
+2018-08-06 17:27:01.504  INFO 1253 --- [main] io.searchbox.client.AbstractJestClient   : Setting server pool to a list of 1 servers: [https://search-microservice-cluster-zzfctkiahe5vfwhcv2sopp4dau.us-east-1.es.amazonaws.com/]
+2018-08-06 17:27:01.506  INFO 1253 --- [main] io.searchbox.client.JestClientFactory    : Using multi thread/connection supporting pooling connection manager
+2018-08-06 17:27:01.599  INFO 1253 --- [main] io.searchbox.client.JestClientFactory    : Using default GSON instance
+2018-08-06 17:27:01.599  INFO 1253 --- [main] io.searchbox.client.JestClientFactory    : Node Discovery disabled...
+2018-08-06 17:27:01.599  INFO 1253 --- [main] io.searchbox.client.JestClientFactory    : Idle connection reaping disabled...
+2018-08-06 17:27:02.411  INFO 1253 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-06 17:27:02.743  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@43015c69: startup date [Mon Aug 06 17:26:58 UTC 2018]; root of context hierarchy
+2018-08-06 17:27:02.820  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.Customer> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findAll()
+2018-08-06 17:27:02.821  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findESAll()
+2018-08-06 17:27:02.822  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/first/{firstName}]}" onto public com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByFirstNameES(java.lang.String)
+2018-08-06 17:27:02.823  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/first/{firstName}]}" onto public com.example.elasticsearch.aws.SpringbootmongoES.model.Customer com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByFirstName(java.lang.String)
+2018-08-06 17:27:02.823  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/last/{lastName}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.Customer> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByLastName(java.lang.String)
+2018-08-06 17:27:02.823  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/last/{lastName}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByLastNameES(java.lang.String)
+2018-08-06 17:27:02.824  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/cn/{country}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.Customer> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByCountry(java.lang.String)
+2018-08-06 17:27:02.824  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/cn/{country}]}" onto public java.util.List<com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES> com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.findByCountryES(java.lang.String)
+2018-08-06 17:27:02.824  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/sync/],methods=[GET]}" onto public void com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.syncMongoAndES()
+2018-08-06 17:27:02.825  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customer/],methods=[POST]}" onto public void com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.save(com.example.elasticsearch.aws.SpringbootmongoES.model.Customer)
+2018-08-06 17:27:02.825  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/es/customer/],methods=[POST]}" onto public void com.example.elasticsearch.aws.SpringbootmongoES.controller.CustomerRestController.save(com.example.elasticsearch.aws.SpringbootmongoES.model.CustomerES)
+2018-08-06 17:27:02.828  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-06 17:27:02.828  INFO 1253 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-06 17:27:02.859  INFO 1253 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-06 17:27:02.859  INFO 1253 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-06 17:27:04.017  INFO 1253 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-08-06 17:27:04.029  INFO 1253 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-08-06 17:27:04.030  INFO 1253 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-08-06 17:27:04.031  INFO 1253 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-06 17:27:04.121  INFO 1253 --- [main] .e.a.S.SpringBootMongoEsApplicationTests : Started SpringBootMongoEsApplicationTests in 6.22 seconds (JVM running for 7.142)
+2018-08-06 17:27:04.277  INFO 1253 --- [Thread-5] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@43015c69: startup date [Mon Aug 06 17:26:58 UTC 2018]; root of context hierarchy
